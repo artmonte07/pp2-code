@@ -1,0 +1,136 @@
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class Major {
+	private String majorID;
+	private String majorName;
+	Scanner in=new Scanner(System.in);
+	
+	ArrayList<String> major = new ArrayList<>();
+	
+	public void setID(String id) {
+		majorID=id;
+		
+	}
+	public void setName(String name) {
+		majorName=name;
+	}
+	
+	public String getID() {
+		return majorID;
+	}
+	public String getName() 
+	{
+		return majorName;
+	}
+	/**public void addMajor() {
+	do {
+		
+		System.out.println("enter major:");
+        majorName = in.nextLine();
+
+        if (!majorName.equals("")) {
+            major.addAll(major);
+        }
+
+    } while(!majorName.equals("")); 
+	
+	}**/
+	
+	public void addMajor() {
+for (int i = 0; i < 3; i++) {
+            
+
+
+            System.out.println("Enter details for major: " + (i + 1));
+
+            System.out.println("Enter Major ID and Major Name: ");
+            //maj.setID(in.next());
+            major.add(in.nextLine());
+
+            
+        }
+		
+		
+		System.out.println();
+	         System.out.println( major);
+            
+        }
+	
+	
+	
+	
+	public void printMajors() {
+		
+		System.out.println(major);
+	
+	
+}
+
+
+}
+
+……Course.java…..
+
+
+import java.util.Scanner;
+public class Course {
+	private String courseID;
+	private String courseName;
+	private String field;
+	String[][] course = new String[5][2];
+	Scanner in=new Scanner(System.in);
+	
+	
+	public Course() {
+		
+	}
+	
+	public void setCourseID(String id) {
+		courseID=id;
+	
+	}
+	
+	public void setCourseName(String name) {
+		courseName=name;
+	
+	}
+	
+	public String getID() {
+		return courseID;
+		
+	}
+	
+	public String getName() {
+		return courseName;
+	}
+	
+	public void addCourse() {
+		
+
+		for(int i = 0 ; i < 2 ; i++){
+			System.out.println("Enter Course "+(i+1)+":");
+		for(int j = 0 ; j < 2; j++)
+		{  if (j==0) {field="Course ID";}
+		if (j==1) {field="Course Name";
+		}
+		System.out.println("Enter "+field+":");
+		course[i][j] = in.nextLine();
+		}
+		System.out.println();
+
+		  }
+
+		}
+		public void printCourse() {
+			for(int i = 0 ; i < course.length ; i++){
+				for(int j = 0 ; j < course[0].length; j++) {
+					System.out.print(course[i][j]+ " ");
+				}
+				System.out.println();
+		    }
+
+	}
+
+}
